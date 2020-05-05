@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>YASH Technologies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://www.yash.com/wp-content/themes/Yash/images/favicon.ico' rel='shortcut icon' type='image/x-icon'/>  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100i,300,400,600,700,800&display=swap" rel="stylesheet">
+  <style>
+    .form-box{
+      margin: 3vh 0;
+     box-shadow: 0 16px 22px rgba(0, 0, 0, 0.25);
+        padding: 20px 15px;
+        background: #fff;
+    }
+    .flex_row{
+      display: flex;align-items: center;
+    }
+    .logo{
+      max-width: 150px;
+    }
+    .box{
+      
+    }
+   
+    body{
+      background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*font-family: 'Rubik', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+        overflow: hidden;
+    }
+    
+    
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+.dImg{
+  height: 100vh;
+  width: 100%
+}
+.txt {
+       position: absolute;
+    top: 30%;
+    left: 10%;
+    right: 0;
+    /* bottom: 0; */
+    /* z-index: 1; */
+    background: transparent;
+    display: block;
+    float: left;
+    color: #fff;
+}
+.video_slider{
+  display: none;
+}
+.play_slider_vid {
+    color: #fff;
+    background: #00b8ff;
+    padding: 12px 30px;
+    display: inline-block;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.video_slider.play{
+  display: block;
+}
+
+
+  </style>
+</head>
+<body>
+
+         <img class="dImg" src="https://www.yash.com/wp-content/uploads/2018/08/ser-top-banner.jpg" alt="">
+
+           <div class="txt">
+           <h2>Lorem ipsum dolor sit amet</h2>
+           <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing.</p>
+
+           <a class="play_slider_vid" onclick="playVid()" >Watch Video</a>
+         </div>
+
+         <div class="video_slider">
+          <video   loop id="myVideo">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+         </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+  
+// $(document).ready(function(){
+//   $(".play_slider_vid").click(function(){
+//     $(".video_slider").addClass("play");
+//   });
+// });
+// var vid = document.getElementById("myVideo"); 
+
+// function playVid() { 
+//   vid.play(); 
+// } 
+
+ var vid = document.getElementById("myVideo"); 
+
+function playVid() { 
+ vid.play(); 
+}
+$('.play_slider_vid').click(function(e){    
+    $('.dImg').fadeOut('fast', function(){
+        $('.video_slider').fadeIn('slow');
+
+
+         
+    });
+});
+</script>
+</body>
+</html>
